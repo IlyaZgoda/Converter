@@ -37,17 +37,17 @@ namespace WindowsFormsApp1
             if (s == null || s.Length < 1)
                 return 0;
 
-            int step = s.Length - 1;
+            int degree = s.Length - 1;
 
             foreach (char c in s.ToUpper())
             {
                 if (c <= '9' && c >= '0')
-                    result += (int)((c - '0') * Math.Pow(n, step));
+                    result += (int)((c - '0') * Math.Pow(n, degree));
 
                 if (c <= 'Z' && c >= 'A')
-                    result += (int)((c - 'A' + 10) * Math.Pow(n, step));
+                    result += (int)((c - 'A' + 10) * Math.Pow(n, degree));
 
-                step--;
+                degree--;
             }
 
             return result;
